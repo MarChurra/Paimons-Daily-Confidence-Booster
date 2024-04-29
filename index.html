@@ -1,0 +1,73 @@
+<html>
+
+<head>
+	<title>Paimon´s Daily Confidence Booster</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+	<link rel="stylesheet" href="index.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;800&display=swap" rel="stylesheet">
+	<script src="index.js" defer type="module"></script>
+</head>
+
+<body>
+	<header>
+		<div class="header-container">
+			<img id="mainImage" src="/GenshinImages/paimonMS.png" class="A Paimon sticker, looking at treasure">
+			<div>
+				<h1>Paimon´s Daily </h1>
+				<h2>Confidence Booster</h2>
+			</div>
+		</div>
+		<video class="background" autoplay muted loop id="mondstadBackground" source
+			src="/GenshinImages/mondstandBackground.mp4" type="video/mp4"> </video>
+		<video class="background" autoplay muted loop id="liyueBackground" source
+			src="/GenshinImages/LiyueBackground.mp4" type="video/mp4">
+		</video>
+		<video class="background" autoplay muted loop id="inazumaBackground" source
+			src="/GenshinImages/inazumaBackground.mp4" type="video/mp4"> </video>
+		<video class="background" autoplay muted loop id="sumeruBackground" source
+			src="/GenshinImages/sumeruBackground.mp4" type="video/mp4"> </video>
+		<video class="background" autoplay muted loop id="fontaineBackground" source
+			src="/GenshinImages/fontaineBackground.mp4" type="video/mp4"> </video>
+	</header>
+	<main>
+
+		<section class="main-content-container">
+			<div id="questionContainer" >
+				<h3 id="question">What would you like to hear today?</h3>
+			</div>
+
+			<div class="selectBackground" id="selectBackground">
+				<image class="Emblem" id="mondstadEmblem" src="/GenshinImages/mondstadEmblem.png" alt="Mondstad Emblem">
+				</image>
+				<image class="Emblem" id="liyueEmblem" src="/GenshinImages/liyueEmblem.png" alt="Liyue Emblem"></image>
+				<image class="Emblem" id="inazumaEmblem" src="/GenshinImages/inazumaEmblem.png" alt="Inazuma Emblem">
+				</image>
+				<image class="Emblem" id="sumeruEmblem" src="/GenshinImages/sumeruEmblem.png" alt="Sumeru Emblem">
+				</image>
+				<image class="Emblem" id="fontaineEmblem" src="/GenshinImages/fontaineEmblem.png" alt="Fontaine Emblem">
+				</image>
+			</div>
+
+
+			<select class="select-emotion">
+				<option id="calmEmotion" value="Calm">I need to <strong>Calm</strong> myself</option>
+				<option id="confidentEmotion" value="Confident">I want to be more <strong> Confident</strong>
+				</option>
+				<option id="prideEmotion" value="Pride">I want to feel <strong>Proud</strong> </option>
+				<option id="braveEmotion" value="Brave">I want to be <strong>Brave</strong></option>
+			</select>
+			<button class="get-quote-btn" id="get-quote-btn">Get your Quote</button>
+
+		</section>
+	</main>
+	<div class="quote-modal" id="quote-modal">
+		<div id="quote-modal-inner"></div>
+		<div id="quote-modal-close-btn">X</div>
+	</div>
+</body>
+
+</html>

@@ -1,8 +1,10 @@
-/*typography*/
 
-@font-face {
-    font-family: 'Genshin Impact Font';
-    src: url('fonts/zh-cn.ttf') format('truetype');
+/*layout*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 html,
@@ -13,44 +15,55 @@ body {
     user-select: none;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container, 
+.main-content-container, 
+.selectBackground,
+#question,
+.select-emotion {
+margin: 0 auto;
+width: 95%;
+min-width: 250px;
+max-width: 750px;
+}
+
+
+/*typography*/
+
+@font-face {
+    font-family: 'Genshin Impact Font';
+    src: url('fonts/zh-cn.ttf') format('truetype');
+}
+
 h1,
 h2,
-h3 {
+h3,
+.get-quote-btn {
     text-align: center;
+    text-shadow: 0 1px 2px black;
 }
 
 h1,
 h2 {
     color: #E2AB44;
     margin: 0;
-    text-shadow: 0 0 2px black;
-    width: 275px;
 }
 
 h1 {
-    font-size: 30px;
     border-bottom: 2px solid #E2AB44;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
+    margin-bottom: 0.3em;
+    padding-bottom: 0.2em;
+    font-size: 1.5rem;
 }
 
 h2 {
-    font-size: 26px;
-}
-
-#question {
-    background-color: #476887;
-    font-size: 24px;
-    display: inline;
-    padding: 20 25px;
-    border-radius: 10px;
-    font-weight: 500;
-    color: #E2AB44;
-    text-shadow: 0 0 2px black;
-}
-
-#questionContainer {
-    margin-bottom: 20px;
+    font-size: 1.2rem;
 }
 
 
@@ -59,25 +72,86 @@ h2 {
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    margin: 25px auto 0 auto;
-    max-width: 550px;
+    justify-content: center;
+    margin-top: 1.5em;
 }
 
 #mainImage {
-    width: 225px;
+    width: 150px;
 }
 
 
 /* main content - controls */
 
-main {
-    position: relative;
-    padding-top: 75px;
+.main-content-container {
+    margin-top: 2em;
+}
+
+.questionContainer {
+    margin-bottom: 1em;
+}
+
+#question {
+    background-color: #476887;
+    font-size: 1.2rem;
+    display: block;
+    width: 90%;
+    padding: 1em 1.5em;
+    border-radius: 5px;
+    font-weight: 500;
+    color: #E2AB44;
+}
+
+.main-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.select-emotion {
+    text-align: center;
+    margin: 1.3em 0;
+    font-size: 1.1rem;
+    padding: 1em 1.5em;
+    border-radius: 5px;
+    background-color: #F0F0F0;
+    font-weight: 700;
+}
+
+.get-quote-btn {
+    background-color: #476887;
+    color: #E2AB44;
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+}
+
+.get-quote-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.get-quote-btn:active {
+    background-color: #3a48bd;
+}
+
+
+/* Background Controls */
+
+.selectBackground {
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .Emblem {
-    width: 75px;
+    width: 60px;
     border: 1px solid #CF9940;
     border-radius: 50%;
     padding: 5px;
@@ -88,12 +162,8 @@ main {
     transform: scale(1.2);
 }
 
-.selectBackground {
-    display: flex;
-    gap: 20px;
-    position: absolute;
-    top: 450px;
-}
+
+/* Backgrounds */
 
 #mondstadBackground,
 #liyueBackground,
@@ -103,8 +173,8 @@ main {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     z-index: -1;
 }
@@ -117,53 +187,14 @@ main {
 }
 
 
-.main-content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.select-emotion {
-    margin: 40px auto;
-    width: 400px;
-    text-align: center;
-    padding: 15px;
-    border-radius: 10px;
-    background-color: #F0F0F0;
-    font-weight: 600;
-
-}
-
-.get-quote-btn {
-    background-color: #476887;
-    color: #E2AB44;
-    text-shadow: 0 0 2px black;
-    padding: 15px 20px;
-    font-size: 20px;
-    border: none;
-    border-radius: 5px;
-}
-
-.get-quote-btn:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-
-}
-
-.get-quote-btn:active {
-    background-color: #3542AD;
-}
-
-
 /* modal */
 
-@media screen and (min-width: 899px) {
-
-    .quote-modal {
+    .quote-container {
         display: none;
+    }
+    .quote-modal {
         position: fixed;
-        margin:auto;
+        margin: auto;
         top: 46%;
         /* Move the top of the modal halfway down the viewport */
         left: 51%;
@@ -178,8 +209,6 @@ main {
         background-size: contain;
         background-repeat: no-repeat;
     }
-
-    #quote-modal-inner {}
 
     .sticker {
         max-width: 340px;
@@ -204,4 +233,3 @@ main {
         background-color: #bd301d;
         border: 2px solid #bd301d;
     }
-}

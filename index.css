@@ -79,7 +79,6 @@ h2 {
     width: 150px;
 }
 
-
 /* main content - controls */
 
 .main-content-container {
@@ -109,9 +108,10 @@ h2 {
 }
 
 .select-emotion {
+    width: 80%;
     text-align: center;
     margin: 1.3em 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 1em 1.5em;
     border-radius: 5px;
     background-color: #F0F0F0;
@@ -121,7 +121,7 @@ h2 {
 .get-quote-btn {
     background-color: #476887;
     color: #E2AB44;
-    padding: 15px 20px;
+    padding: 1em 1.2em;
     font-size: 1rem;
     font-weight: 500;
     border: none;
@@ -140,7 +140,8 @@ h2 {
 /* Background Controls */
 
 .selectBackground {
-    margin-top: 30%;
+    margin-top: 20%;
+    margin-bottom: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,42 +188,50 @@ h2 {
 
 /* Modal */
 
-.quote-container {
-    /* display: none; */
-}
-
-.quote-frame {
+.quote-modal {
     position: fixed;
-    width:85%;
+    width: 95%;
     min-width: 300px;
     max-width: 750px;
     height: auto;
-    top: 50%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-#quote-modal-close-btn {
-    position: relative;
-    top: 6%;
-    right: 16%;
+.quote-frame {
+    width: 100%;
+}
+
+.quote-modal-close-btn {
+    position: absolute;
+    top: 7%;
+    right: 12%;
     background-color: transparent;
-    border: 2px solid #EEC97C;
+    border: 3px solid #EEC97C;
     color: #EEC97C;
     border-radius: 50%;
-    padding: 4px 8px;
-    font-size: 14px;
+    font-size: 0.7rem;
+    padding: 0.4em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
-.sticker {
-    max-width: 340px;
-    max-height: 420px;
-    border-radius: 5px;
-}
-
-
-#quote-modal-close-btn:hover {
+.quote-modal-close-btn:hover {
     color: white;
     background-color: #bd301d;
     border: 2px solid #bd301d;
+}
+
+.quote-modal-close-btn:active {
+    transform: scale(1.1);
+}
+
+.sticker {
+    max-width: 175px;
+}
+
+.hidden {
+    display: none;
 }

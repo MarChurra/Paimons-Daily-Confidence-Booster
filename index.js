@@ -1,23 +1,40 @@
 import { genshinStickers as stickers } from '/GenshinData.js'
 
-//Variables 
+//DOM Variables 
 const backgroundEmblems = document.getElementsByClassName('Emblem')
 const getQuoteBtn = document.getElementById('get-quote-btn')
 const closeBtn = document.getElementById('closeBtn')
 const quoteModal = document.getElementById('quoteModal')
-let quoteModalOpen = false
+const saveBtn = document.getElementById('saveBtn')
+let modalOpen = false
+
 
 //Open Modal
 getQuoteBtn.addEventListener('click', generateModal)
 
 //Close Modal
+closeBtn.addEventListener('click', function () {
+    closeModal()
+})
 
+function closeModal() {
+    quoteModal.classList.toggle('hidden')
+    document.querySelector('.main-content-container').classList.remove('hidden')
+    modalOpen = false
+}
 
-//Generate Modal
+document.addEventListener('click', function (e) {
+    if (modalOpen && !quoteModal.contains(e.target)) {
+        closeModal();
+    }
+})
+
+//Open Modal
 function generateModal(stickers) {
     const modalInner = document.getElementById('quote-modal-inner')
     quoteModal.classList.toggle('hidden')
     document.querySelector('.main-content-container').classList.add('hidden')
+    modalOpen = false
 }
 
 

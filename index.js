@@ -6,11 +6,12 @@ const getQuoteBtn = document.getElementById('get-quote-btn')
 const closeBtn = document.getElementById('closeBtn')
 const quoteModal = document.getElementById('quoteModal')
 const saveBtn = document.getElementById('saveBtn')
+const selectEmotion = document.getElementById("selectEmotion")
 let modalOpen = false
 
 
 //Open Modal
-getQuoteBtn.addEventListener('click', generateModal)
+getQuoteBtn.addEventListener('click', openModal)
 
 //Close Modal
 closeBtn.addEventListener('click', function () {
@@ -23,20 +24,41 @@ function closeModal() {
     modalOpen = false
 }
 
-document.addEventListener('click', function (e) {
-    if (modalOpen && !quoteModal.contains(e.target)) {
+window.addEventListener('mouseup', function (e) {
+    if (modalOpen && !e.target.closest('#quoteModal')) {
         closeModal();
     }
 })
 
 //Open Modal
-function generateModal(stickers) {
+function openModal() {
     const modalInner = document.getElementById('quote-modal-inner')
     quoteModal.classList.toggle('hidden')
     document.querySelector('.main-content-container').classList.add('hidden')
-    modalOpen = false
+    modalOpen = true
+    renderModalContent(stickers)
 }
 
+function retrieveMatchingEmotion(stickers) {
+    const selectedEmotion = selectEmotion.value
+    const matchingStickers = stickers.filter(sticker => sticker.emotionTag === selectedEmotion)
+    if (matchingStickers.length > 0) {
+        const randomIndex = Math.floor(Math.random() * matchingStickers.length)
+        const randomSticker = matchingStickers[randomIndex]
+        return randomSticker
+    }
+}
+
+function renderModalContent(stickers) {
+    let modalContent = ``
+    const retrievedSticker = retrieveMatchingEmotion(stickers)
+
+    modalContent += `
+        <img class="sticker" src="${retrievedSticker.image}"></img>
+        <p>${retrievedSticker.quote}</p>
+        `
+    document.getElementById("quote-modal-inner").innerHTML = modalContent
+}
 
 // Emblem Event Caller
 for (let i = 0; i < backgroundEmblems.length; i++) {

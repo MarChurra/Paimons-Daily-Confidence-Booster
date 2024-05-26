@@ -13,32 +13,15 @@ let modalOpen = false
 //Open Modal
 getQuoteBtn.addEventListener('click', openModal)
 
-//Close Modal
-closeBtn.addEventListener('click', function () {
-    closeModal()
-})
 
-function closeModal() {
-    quoteModal.classList.toggle('hidden')
-    document.querySelector('.main-content-container').classList.remove('hidden')
-    modalOpen = false
-}
-
-window.addEventListener('mouseup', function (e) {
-    if (modalOpen && !e.target.closest('#quoteModal')) {
-        closeModal();
-    }
-})
-
-//Open Modal
 function openModal() {
-    const modalInner = document.getElementById('quote-modal-inner')
     quoteModal.classList.toggle('hidden')
     document.querySelector('.main-content-container').classList.add('hidden')
     modalOpen = true
     renderModalContent(stickers)
 }
 
+//Generate Modal
 function retrieveMatchingEmotion(stickers) {
     const selectedEmotion = selectEmotion.value
     const matchingStickers = stickers.filter(sticker => sticker.emotionTag === selectedEmotion)
@@ -60,12 +43,28 @@ function renderModalContent(stickers) {
     document.getElementById("quote-modal-inner").innerHTML = modalContent
 }
 
-// Emblem Event Caller
+//Close Modal
+closeBtn.addEventListener('click', function () {
+    closeModal()
+})
+
+function closeModal() {
+    quoteModal.classList.toggle('hidden')
+    document.querySelector('.main-content-container').classList.remove('hidden')
+    modalOpen = false
+}
+
+window.addEventListener('mouseup', function (e) {
+    if (modalOpen && !e.target.closest('#quoteModal')) {
+        closeModal();
+    }
+})
+
+//Change Background
 for (let i = 0; i < backgroundEmblems.length; i++) {
     backgroundEmblems[i].addEventListener('click', changeBackground);
 }
 
-//Change Background
 function changeBackground(e) {
 
     const emblemId = e.target.id
@@ -75,31 +74,20 @@ function changeBackground(e) {
         background.style.display = "none";
     }
 
-    if (emblemId === "mondstadEmblem") {
-        let mondstadBackground = document.getElementById("mondstadBackground")
-        mondstadBackground.style.display = "block"
+    const backgroundMap = {
+        "mondstadEmblem": "mondstadBackground",
+        "liyueEmblem": "liyueBackground",
+        "inazumaEmblem": "inazumaBackground",
+        "sumeruEmblem": "sumeruBackground",
+        "fontaineEmblem": "fontaineBackground"
     }
 
-    else if (emblemId === "liyueEmblem") {
-        let liyueBackground = document.getElementById("liyueBackground")
-        liyueBackground.style.display = "block"
-    }
-
-    else if (emblemId === "inazumaEmblem") {
-        let inazumaBackground = document.getElementById("inazumaBackground")
-        inazumaBackground.style.display = "block"
-    }
-
-    else if (emblemId === "sumeruEmblem") {
-        let sumeruBackground = document.getElementById("sumeruBackground")
-        sumeruBackground.style.display = "block"
-    }
-
-    else if (emblemId === "fontaineEmblem") {
-        let fontaineBackground = document.getElementById("fontaineBackground")
-        fontaineBackground.style.display = "block"
+    const backgroundId = backgroundMap[emblemId]
+    if (backgroundId) {
+        document.getElementById(backgroundId).style.display = "block"
     }
 }
+
 
 
 

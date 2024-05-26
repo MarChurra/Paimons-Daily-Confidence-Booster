@@ -124,6 +124,7 @@ h2 {
 
 .get-quote-btn {
     background-color: #476887;
+    margin-top: 1.5em;
     color: #E2AB44;
     padding: 1em 1.2em;
     font-size: 0.7rem;
@@ -197,14 +198,12 @@ h2 {
 
 /* Modal */
 .quote-modal {
-    position: fixed;
-    width: 95%;
+    width: 100%;
     min-width: 300px;
     max-width: 750px;
     height: auto;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    margin-top: -2.5em;
 }
 
 .quote-frame {
@@ -224,6 +223,7 @@ h2 {
     cursor: pointer;
     display: flex;
     align-items: center;
+    z-index: 2;
 }
 
 .quote-modal-close-btn:hover {
@@ -249,23 +249,29 @@ h2 {
 
 .save-btn {
     border-radius: 5px;
-    padding: 0.5em 1em;
-    font-size: 0.7rem;
+    padding: 0.5em 0.8em;
+    font-size: 0.8rem;
     background-color: #476887;
     color: #E2AB44;
     cursor: pointer;
+
 }
 
 .quote-modal-inner {
-margin-top: 0.5em;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+    margin-top: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.quote-modal-inner p {
+ font-size: 0.8rem; 
+}
+ 
+
 .sticker {
-    width: 75px;
+    width: 50px;
 }
 
 .hidden {

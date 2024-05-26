@@ -265,9 +265,17 @@ h2 {
 }
 
 .quote-modal-inner p {
- font-size: 0.8rem; 
+    font-size: 0.8rem;
 }
- 
+
+.audio-btn {
+    width: 30px;
+    background-color: #E2AB44;
+    border-radius: 50%;
+    position: fixed;
+    top: 2%;
+    right: 5%;
+}
 
 .sticker {
     width: 50px;

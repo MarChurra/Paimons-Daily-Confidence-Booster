@@ -67,11 +67,13 @@ for (let i = 0; i < backgroundEmblems.length; i++) {
 
 function changeBackground(e) {
 
-    const emblemId = e.target.id
+    const emblemId = e.target.id;
     let backgrounds = document.getElementsByClassName('background')
+    let currentAudio = document.getElementById('currentAudio')
+    let themeSrc
 
     for (let background of backgrounds) {
-        background.style.display = "none";
+        background.style.display = "none"
     }
 
     const backgroundMap = {
@@ -82,11 +84,42 @@ function changeBackground(e) {
         "fontaineEmblem": "fontaineBackground"
     }
 
-    const backgroundId = backgroundMap[emblemId]
+    const audioMap = {
+        "mondstadEmblem": "Music/Mondstad_Theme.mp3",
+        "liyueEmblem": "Music/Liyue_Theme.mp3",
+        "inazumaEmblem": "Music/Inazuma_Theme.mp3",
+        "sumeruEmblem": "Music/Sumeru_Theme.mp3",
+        "fontaineEmblem": "Music/Fontaine_Theme.mp3"
+    }
+
+    const backgroundId = backgroundMap[emblemId];
     if (backgroundId) {
         document.getElementById(backgroundId).style.display = "block"
+        themeSrc = audioMap[emblemId];
     }
+
+    if (themeSrc) {
+        currentAudio.src = themeSrc;
+    } 
 }
+
+//Control Audio 
+const disableAudio = document.getElementById('enableAudioBtn')
+const enableAudio = document.getElementById('disabledAudioBtn')
+const currentAudio = document.getElementById('currentAudio')
+
+disableAudio.addEventListener('click', function () {
+    currentAudio.muted = true
+    disableAudio.classList.toggle('hidden')
+    enableAudio.classList.toggle('hidden')
+})
+
+enableAudio.addEventListener('click', function () {
+    currentAudio.muted = false
+    enableAudio.classList.toggle('hidden')
+    disableAudio.classList.toggle('hidden')
+})
+
 
 
 

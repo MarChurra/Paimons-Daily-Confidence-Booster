@@ -120,6 +120,7 @@ enableAudio.addEventListener('click', function () {
     disableAudio.classList.toggle('hidden')
 })
 
+//Play Audio upon page refresh / Load
 playButton.addEventListener('click', function () {
     var audio = document.getElementById('currentAudio')
     var playButton = document.getElementById('playButton')

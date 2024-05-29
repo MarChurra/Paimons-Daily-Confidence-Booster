@@ -128,8 +128,19 @@ playButton.addEventListener('click', function () {
         playButton.classList.toggle('hidden')
     }).catch(function (error) {
         console.error('Error attempting to play audio:', error)
-    });
-});
+    })
+})
+
+//Capture Screenshot
+
+document.getElementById('saveBtn').addEventListener('click', function () {
+    html2canvas(document.body).then(function (canvas) {
+        let link = document.createElement('a')
+        link.href = canvas.toDataURL()
+        link.download = 'screenshot.png'
+        link.click()
+    })
+})
 
 
 

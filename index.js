@@ -132,17 +132,26 @@ playButton.addEventListener('click', function () {
 })
 
 //Capture Screenshot
-
 document.getElementById('saveBtn').addEventListener('click', function () {
-    html2canvas(document.body).then(function (canvas) {
+
+    document.getElementById('quoteModal').style.backgroundColor = "#476887"
+
+    html2canvas(document.getElementById('quoteModal')).then(function (canvas) {
         let link = document.createElement('a')
         link.href = canvas.toDataURL()
         link.download = 'screenshot.png'
         link.click()
+        displayNotification()
+        document.getElementById('notification').style.visibility = 'visible'
+        document.getElementById('quoteModal').style.backgroundColor = ""
     })
 })
 
-
+function displayNotification() {
+    setTimeout(function () {
+        document.getElementById('notification').style.visibility = 'hidden'
+    }, 2000)
+}
 
 
 

@@ -317,5 +317,19 @@ h2 {
 }
 
 .notification {
-    
+    background-color: #2D3D4C;
+    color: #E2AB44;
+    text-shadow: 0 1px 2px black;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.3em 0.4em;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    width: 75%;
+    z-index: 2;
+    visibility: hidden;
 }

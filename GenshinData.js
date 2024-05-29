@@ -134,16 +134,9 @@ export const genshinStickers = [
         quote: "Like the mountains that stand firm against the winds, you can maintain a tranquil demeanor in the face of life's storms. Serenity is the key to enduring all trials.",
     },
     {
-        emotionTag: "Calm",
+        emotionTag: "Confident",
         image: "stickers/ArlechinoCalm.png",
         alt: "A calm Arlechino, sitting upon a throne",
-        region: "Fontaine",
-        quote: " Fear not. What's a little thunder when even a storm wouldn't stop you in your tracks.",
-    },
-    {
-        emotionTag: "Confident",
-        image: "stickers/CynoConfident.png",
-        alt: "A confident Cyno",
         region: "Fontaine",
         quote: " Fear not. What's a little thunder when even a storm wouldn't stop you in your tracks.",
     },

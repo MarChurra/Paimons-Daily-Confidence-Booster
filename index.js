@@ -60,7 +60,7 @@ window.addEventListener('mouseup', function (e) {
     }
 })
 
-//Change Background
+//Change Background and Background Music
 for (let i = 0; i < backgroundEmblems.length; i++) {
     backgroundEmblems[i].addEventListener('click', changeBackground);
 }
@@ -100,7 +100,7 @@ function changeBackground(e) {
 
     if (themeSrc) {
         currentAudio.src = themeSrc;
-    } 
+    }
 }
 
 //Control Audio 
@@ -119,6 +119,16 @@ enableAudio.addEventListener('click', function () {
     enableAudio.classList.toggle('hidden')
     disableAudio.classList.toggle('hidden')
 })
+
+playButton.addEventListener('click', function () {
+    var audio = document.getElementById('currentAudio')
+    var playButton = document.getElementById('playButton')
+    audio.play().then(() => {
+        playButton.classList.toggle('hidden')
+    }).catch(function (error) {
+        console.error('Error attempting to play audio:', error)
+    });
+});
 
 
 

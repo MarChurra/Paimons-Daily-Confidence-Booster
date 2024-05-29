@@ -19,10 +19,13 @@
 
 	<header class="header-container">
 
-		<img src="/GenshinImages/audio.png" id="enableAudioBtn" class="audio-btn">
-		<img src="/GenshinImages/muted_audio.png" id="disabledAudioBtn" class=" audio-btn hidden">
+		<div class="audio-controls">
+			<button id="playButton">Play Audio</button>
+			<img src="/GenshinImages/audio.png" id="enableAudioBtn" class="audio-btn">
+			<img src="/GenshinImages/muted_audio.png" id="disabledAudioBtn" class=" audio-btn hidden">
+		</div>
 
-		<audio id="currentAudio" autoplay loop src="Music/Opening_Theme.mp3"></audio>
+		<audio id="currentAudio" autoplay loop preload="auto" src="/Opening_Theme.mp3?v=1" type="audio/mpeg"></audio>
 
 
 		<img id="mainImage" src="/GenshinImages/paimonMS.png" class="mainImage"

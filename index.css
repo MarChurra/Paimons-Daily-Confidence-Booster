@@ -272,9 +272,6 @@ h2 {
     width: 30px;
     background-color: #E2AB44;
     border-radius: 50%;
-    position: fixed;
-    top: 2%;
-    right: 5%;
     cursor: pointer;
 }
 
@@ -285,4 +282,28 @@ h2 {
 
 .hidden {
     display: none;
+}
+
+#playButton {
+    padding: 0.8em;
+    font-size: 0.7rem;
+    color: #C49842;
+    background-color: #476887;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 0 1px 2px black;
+}
+
+#playButton:active {
+    background-color: #007BFF;
+}
+
+.audio-controls {
+    display: flex;
+    gap: 5px;
+    position: fixed;
+    top: 3%;
+    right: 2%;
+    width: auto;
 }

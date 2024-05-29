@@ -152,7 +152,7 @@ h2 {
     background-color: #2F3F4E;
     padding: 0.5em;
     border-radius: 5px;
-    opacity: 80%;
+    opacity: 95%;
     width: 100%;
     max-width: 275px;
     margin-bottom: 1em;
@@ -217,7 +217,7 @@ h2 {
     border: 3px solid #EEC97C;
     color: #EEC97C;
     border-radius: 50%;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     padding: 0.4em;
     cursor: pointer;
     display: flex;
@@ -237,7 +237,7 @@ h2 {
 
 .modal-content {
     position: absolute;
-    top: -13%;
+    top: -12%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -249,7 +249,7 @@ h2 {
 .save-btn {
     border-radius: 5px;
     padding: 0.5em 0.8em;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     background-color: #476887;
     color: #E2AB44;
     cursor: pointer;
@@ -265,7 +265,11 @@ h2 {
 }
 
 .quote-modal-inner p {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
+    width: 75%;
+    font-weight: bold;
+    line-height: 1.5;
+    text-shadow: 0 0 1px #E2AB44;
 }
 
 .audio-btn {
@@ -276,7 +280,7 @@ h2 {
 }
 
 .sticker {
-    width: 50px;
+    width: 30px;
 }
 
 

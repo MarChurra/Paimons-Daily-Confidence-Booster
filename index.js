@@ -54,7 +54,7 @@ function closeModal() {
 }
 
 window.addEventListener('mouseup', function (e) {
-    if (modalOpen && !e.target.closest('#quoteModal')) {
+    if (modalOpen && !e.target.closest('#quoteModal') && !e.target.closest('.audio-btn') && !e.target.closest('.emblem')&& e.target.closest('playButton')) {
         closeModal();
     }
 })

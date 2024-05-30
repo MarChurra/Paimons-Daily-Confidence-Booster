@@ -412,8 +412,8 @@ h2 {
 
 @media(min-width: 1250px) {
     .quote-frame {
-        height: 150%;
-        width: 150%;
+        height: 175%;
+        width: 200%;
     }
 
     .mainImage {
@@ -461,7 +461,7 @@ h2 {
 
     #selectEmotion {
         font-size: 1.5rem;
-        width: 80%;
+        width: 70%;
     }
 
     .get-quote-btn {
@@ -469,7 +469,9 @@ h2 {
     }
 
     .emblem {
-        width: 80px;
+        width: 70px;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
     }
 
     .selectBackground {

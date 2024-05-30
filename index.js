@@ -84,11 +84,11 @@ function changeBackground(e) {
     }
 
     const audioMap = {
-        "mondstadEmblem": "Music/Mondstad_Theme.mp3",
-        "liyueEmblem": "Music/Liyue_Theme.mp3",
-        "inazumaEmblem": "Music/Inazuma_Theme.mp3",
-        "sumeruEmblem": "Music/Sumeru_Theme.mp3",
-        "fontaineEmblem": "Music/Fontaine_Theme.mp3"
+        "mondstadEmblem": "/music/Mondstad_Theme.mp3",
+        "liyueEmblem": "/music/Liyue_Theme.mp3",
+        "inazumaEmblem": "/music/Inazuma_Theme.mp3",
+        "sumeruEmblem": "/music/Sumeru_Theme.mp3",
+        "fontaineEmblem": "/music/Fontaine_Theme.mp3"
     }
 
     const backgroundId = backgroundMap[emblemId];

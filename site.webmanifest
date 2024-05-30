@@ -3,12 +3,12 @@
     "short_name": "Genshin Quotes",
     "icons": [
         {
-            "src": "icon/android-chrome-192x192.png",
+            "src": "/android-chrome-192x192.png",
             "sizes": "200x200",
             "type": "image/png"
         },
         {
-            "src": "icon/android-chrome-512x512.png",
+            "src": "/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }

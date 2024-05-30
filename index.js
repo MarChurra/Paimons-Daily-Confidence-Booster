@@ -74,7 +74,6 @@ function changeBackground(e) {
     for (let background of backgrounds) {
         background.style.display = "none"
     }
-
     const backgroundMap = {
         "mondstadEmblem": "mondstadBackground",
         "liyueEmblem": "liyueBackground",

@@ -413,6 +413,7 @@ h2 {
 @media(min-width: 1250px) {
     .quote-frame {
         height: 200%;
+        width: 150%;
     }
 
     .mainImage {
@@ -428,8 +429,8 @@ h2 {
     }
 
     #playButton {
-        font-size: 1rem;
-        padding: 1em;
+        font-size: 1.5rem;
+        padding: 0.3em 1em
     }
 
     .audio-btn {
@@ -446,11 +447,12 @@ h2 {
     }
 
     .quote-modal-inner p {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+        line-height: 1.7;
     }
 
     .save-btn {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     #question {
@@ -481,5 +483,6 @@ h2 {
 
     .notification {
         font-size: 1.25rem;
+        display: block;
     }
 }

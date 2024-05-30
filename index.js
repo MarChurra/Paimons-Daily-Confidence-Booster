@@ -5,7 +5,6 @@ const backgroundEmblems = document.getElementsByClassName('Emblem')
 const getQuoteBtn = document.getElementById('get-quote-btn')
 const closeBtn = document.getElementById('closeBtn')
 const quoteModal = document.getElementById('quoteModal')
-const saveBtn = document.getElementById('saveBtn')
 const selectEmotion = document.getElementById("selectEmotion")
 let modalOpen = false
 

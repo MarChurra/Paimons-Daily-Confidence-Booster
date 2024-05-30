@@ -209,7 +209,7 @@ h2 {
     width: 100%;
     min-width: 300px;
     max-width: 750px;
-    height: auto;
+    height: 300%;
 }
 
 .quote-modal-close-btn {
@@ -252,7 +252,7 @@ h2 {
 .save-btn {
     border-radius: 5px;
     padding: 0.5em 0.8em;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     background-color: #476887;
     color: #E2AB44;
     cursor: pointer;
@@ -268,7 +268,7 @@ h2 {
 }
 
 .quote-modal-inner p {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     width: 75%;
     font-weight: bold;
     line-height: 1.5;
@@ -284,7 +284,7 @@ h2 {
 }
 
 .sticker {
-    width: 35px;
+    width: 50px;
 }
 
 

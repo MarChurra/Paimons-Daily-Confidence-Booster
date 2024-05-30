@@ -417,40 +417,40 @@ h2 {
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     #playButton {
-        font-size: 1.25rem;
-    }
-
-    .audio-btn {
-        width: 75px;
-        margin-left: 1em;
-    }
-
-    .sticker {
-        width: 150px;
-    }
-
-    .quote-modal-inner {
-        margin-top: 3em;
-    }
-
-    .quote-modal-inner p {
-        font-size: 1.25rem;
-    }
-
-    .save-btn {
         font-size: 1.5rem;
     }
 
+    .audio-btn {
+        width: 100px;
+        margin-left: 30px;
+    }
+
+    .sticker {
+        width: 200px;
+    }
+
+    .quote-modal-inner {
+        margin-top: 2em;
+    }
+
+    .quote-modal-inner p {
+        font-size: 1.5rem;
+    }
+
+    .save-btn {
+        font-size: 2.5rem;
+    }
+
     #question {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     #selectEmotion {
@@ -458,18 +458,23 @@ h2 {
     }
 
     .get-quote-btn {
-        font-size: 2.25rem;
+        font-size: 2.5rem;
     }
 
     .emblem {
-        width: 90px;
+        width: 100px;
     }
 
     .selectBackground {
-        max-width: 750px;
+        max-width: 900px;
+        gap: 30px;
     }
 
     .quote-modal-close-btn {
+        font-size: 1.25rem;
+    }
+
+    .notification {
         font-size: 1.25rem;
     }
 }

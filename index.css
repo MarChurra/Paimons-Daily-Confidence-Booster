@@ -412,12 +412,12 @@ h2 {
 
 @media(min-width: 1250px) {
     .quote-frame {
-        height: 200%;
-        width: 200%;
+        height: 150%;
+        width: 150%;
     }
 
     .mainImage {
-        width: 200px;
+        width: 190px;
     }
 
     h1 {
@@ -429,12 +429,12 @@ h2 {
     }
 
     #playButton {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         padding: 0.1em 1em
     }
 
     .audio-btn {
-        width: 100px;
+        width: 75px;
         margin-left: 25px;
     }
 

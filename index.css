@@ -277,6 +277,10 @@ h2 {
     line-height: 1.5;
     text-shadow: 0 0 1px black;
     color: #E2AB44;
+    background-color: #476887;
+    border-radius: 5px;
+    padding: 1em;
+    opacity: 90%;
 }
 
 .audio-btn {
@@ -370,7 +374,7 @@ h2 {
     }
 
     .sticker {
-        width: 100px;
+        width: 80px;
     }
 
     .quote-modal-inner {
@@ -398,7 +402,7 @@ h2 {
     }
 
     .emblem {
-        width: 65px;
+        width: 60px;
     }
 
     .selectBackground {
@@ -439,7 +443,7 @@ h2 {
     }
 
     .sticker {
-        width: 160px;
+        width: 100px;
     }
 
 
@@ -449,7 +453,7 @@ h2 {
     }
 
     .save-btn {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     #question {
@@ -466,7 +470,7 @@ h2 {
     }
 
     .emblem {
-        width: 70px;
+        width: 60px;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
     }
@@ -516,17 +520,17 @@ h2 {
     }
 
     .sticker {
-        width: 180px;
+        width: 150px;
     }
 
 
     .quote-modal-inner p {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         line-height: 1.5;
     }
 
     .save-btn {
-        font-size: 1.75rem;
+        font-size: 1.50rem;
     }
 
     #question {
@@ -543,9 +547,7 @@ h2 {
     }
 
     .emblem {
-        width: 70px;
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
+        width: 60px;
     }
 
     .selectBackground {

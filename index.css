@@ -412,56 +412,53 @@ h2 {
 
 @media(min-width: 1250px) {
     .quote-frame {
-        height: 175%;
+        height: 150%;
         width: 200%;
     }
 
     .mainImage {
-        width: 190px;
-    }
-
-    h1 {
-        font-size: 3rem;
-    }
-
-    h2 {
-        font-size: 2.5rem;
-    }
-
-    #playButton {
-        font-size: 1.25rem;
-        padding: 0.1em 1em
-    }
-
-    .audio-btn {
-        width: 75px;
-        margin-left: 25px;
-    }
-
-    .sticker {
         width: 200px;
     }
 
-    .quote-modal-inner {
-        margin-top: 1em;
+    h1 {
+        font-size: 2.5rem;
     }
 
+    h2 {
+        font-size: 2rem;
+    }
+
+    #playButton {
+        font-size: 1rem;
+        padding: 0.5em;
+    }
+
+    .audio-btn {
+        width: 50px;
+        margin-left: 10px;
+    }
+
+    .sticker {
+        width: 180px;
+    }
+
+
     .quote-modal-inner p {
-        font-size: 1.6rem;
-        line-height: 1.7;
+        font-size: 1.25rem;
+        line-height: 1.5;
     }
 
     .save-btn {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     #question {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     #selectEmotion {
-        font-size: 1.5rem;
-        width: 70%;
+        font-size: 1.25rem;
+        width: 80%;
     }
 
     .get-quote-btn {
@@ -475,8 +472,9 @@ h2 {
     }
 
     .selectBackground {
-        max-width: 900px;
+        width: auto;
         gap: 25px;
+        padding: 1em 1.5em;
     }
 
     .quote-modal-close-btn {

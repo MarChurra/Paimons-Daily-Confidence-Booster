@@ -212,7 +212,7 @@ h2 {
     width: 100%;
     min-width: 300px;
     max-width: 750px;
-    height: 150%;
+    height: 200%;
 }
 
 .quote-modal-close-btn {
@@ -343,7 +343,7 @@ h2 {
 
 @media(min-width: 425px) {
     .quote-frame {
-        height: 300%;
+        height: 225%;
     }
 }
 
@@ -492,11 +492,6 @@ h2 {
 }
 
 @media(min-width: 1500px) {
-    .quote-frame {
-        height: 150%;
-        width: 200%;
-    }
-
     .mainImage {
         width: 225px;
     }

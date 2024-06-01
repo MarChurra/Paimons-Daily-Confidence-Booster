@@ -343,13 +343,13 @@ h2 {
 
 @media(min-width: 425px) {
     .quote-frame {
-        height: 250%;
+        height: 300%;
     }
 }
 
 @media(min-width: 750px) {
     .quote-frame {
-        height: 150%;
+        height: 200%;
     }
 
     .mainImage {

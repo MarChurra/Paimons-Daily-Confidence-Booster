@@ -280,7 +280,8 @@ h2 {
     background-color: #476887;
     border-radius: 5px;
     padding: 1em;
-    opacity: 90%;
+    opacity: 95%;
+    text-align: center;
 }
 
 .audio-btn {
@@ -349,7 +350,7 @@ h2 {
 
 @media(min-width: 425px) and (-webkit-device-pixel-ratio: 3) {
     .quote-frame {
-        height: 50%;
+        height: 100%;
     }
 }
 
